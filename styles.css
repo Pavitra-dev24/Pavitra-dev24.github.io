@@ -158,7 +158,7 @@ svg { display: block; }
 .hero-facts dt { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-on-paper-mute); }
 .hero-facts dd { margin: 0; font-size: 14px; font-weight: 500; }
 
-.hero-inner { will-change: opacity, transform; }
+.hero-fade-text { will-change: opacity, transform; }
 .hero-gauge-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; will-change: opacity, transform; }
 .hero-gauge { width: 100%; max-width: 260px; }
 .gauge-track { fill: none; stroke: var(--line-on-paper); stroke-width: 10; }
@@ -224,7 +224,7 @@ svg { display: block; }
 }
 .timeline-item:last-child { border-bottom: 1px solid var(--line-on-paper); }
 .timeline-date { display: flex; flex-direction: column; font-family: var(--font-mono); font-size: 13px; color: var(--text-on-paper-mute); gap: 1px; }
-.timeline-date span:nth-child(2) { margin-bottom: 6px; font-weight: 600; color: var(--text-on-paper); }
+.timeline-date span:nth-child(2) { margin-bottom: 6px; }
 .timeline-to { margin: 4px 0; opacity: 0.6; }
 .timeline-body h3 { font-size: 19px; font-weight: 600; }
 .timeline-body h3 span { font-weight: 400; color: var(--text-on-paper-mute); font-family: var(--font-body); font-size: 16px; }
