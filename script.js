@@ -67,6 +67,11 @@
     });
   }
 
+  // hero content is the first thing on the page, it should always animate in
+  // immediately on load rather than waiting for a scroll-triggered
+  // intersection, which may not fire promptly on shorter viewports
+  document.querySelectorAll(".hero .reveal, .hero .hero-h1").forEach(activate);
+
   if (reduceMotion) {
     revealTargets.forEach(activate);
   } else if ("IntersectionObserver" in window) {
@@ -145,7 +150,7 @@
   var progressBar = document.getElementById("scrollProgressBar");
   var heroSection = document.querySelector(".hero");
   var heroFadeTargets = heroSection
-    ? heroSection.querySelectorAll(".hero-inner, .hero-gauge-wrap")
+    ? heroSection.querySelectorAll(".hero-fade-text, .hero-gauge-wrap")
     : [];
   var doHeroFade = heroSection && heroFadeTargets.length && !reduceMotion;
 
