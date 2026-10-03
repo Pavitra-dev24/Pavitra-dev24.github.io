@@ -1,0 +1,990 @@
+diff --git a/index.html b/index.html
+index 0088c2c..35f818e 100644
+--- a/index.html
++++ b/index.html
+@@ -5,6 +5,7 @@
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Pavitra Sharma | Software Developer</title>
+ <meta name="description" content="Pavitra Sharma builds explainable, full stack software for gaps in India's civic infrastructure. Flood relief coordination, address trust, UPI fraud protection, and review integrity.">
++<meta name="theme-color" content="#0E1B2A">
+ <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='42' fill='none' stroke='%230E1B2A' stroke-width='8'/%3E%3Ccircle cx='50' cy='50' r='42' fill='none' stroke='%23F0A63B' stroke-width='8' stroke-dasharray='180 264' stroke-linecap='round' transform='rotate(-90 50 50)'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%230E1B2A'/%3E%3C/svg%3E">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+@@ -22,9 +23,9 @@
+   <div class="nav-inner">
+     <a class="nav-mark" href="#top" aria-label="Pavitra Sharma. Back to top.">
+       <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true">
+-        <circle cx="50" cy="50" r="42" fill="none" stroke="var(--ink)" stroke-width="9"/>
++        <circle cx="50" cy="50" r="42" fill="none" stroke="var(--text-on-ink)" stroke-width="9"/>
+         <circle cx="50" cy="50" r="42" fill="none" stroke="var(--signal)" stroke-width="9" stroke-dasharray="180 264" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+-        <circle cx="50" cy="50" r="7" fill="var(--ink)"/>
++        <circle cx="50" cy="50" r="7" fill="var(--text-on-ink)"/>
+       </svg>
+       <span class="nav-mark-name">Pavitra Sharma</span>
+     </a>
+@@ -53,14 +54,8 @@
+ <main id="main">
+ 
+   <!-- ============ HERO ============ -->
++  <div class="hero-wrap">
+   <section class="hero" aria-label="Introduction">
+-    <div class="code-bg code-light" aria-hidden="true">
+-      <span class="code-bit" style="top:10%; left:4%; --r:-3deg; --dur:12s; --delay:0s;">def build_checklist():</span>
+-      <span class="code-bit sm" style="top:24%; left:93%; --r:2deg; --dur:9s; --delay:0.6s;">trust_score = 0 to 100</span>
+-      <span class="code-bit" style="top:48%; left:2%; --r:1deg; --dur:13s; --delay:1.2s;">status: SHIPPED</span>
+-      <span class="code-bit sm" style="top:66%; left:91%; --r:-2deg; --dur:10s; --delay:0.3s;">explainable = True</span>
+-      <span class="code-bit" style="top:85%; left:6%; --r:2deg; --dur:11s; --delay:1.6s;">riverbank_priority += 40</span>
+-    </div>
+     <div class="hero-inner">
+       <div class="hero-fade-text">
+         <p class="eyebrow reveal">
+@@ -102,6 +97,7 @@
+       <p class="hero-gauge-caption">Live deployments, not slide decks</p>
+     </div>
+   </section>
++  </div>
+ 
+   <!-- ============ MARQUEE ============ -->
+   <div class="marquee" aria-hidden="true">
+@@ -135,12 +131,6 @@
+ 
+   <!-- ============ ABOUT ============ -->
+   <section class="about" id="about">
+-    <div class="code-bg code-light" aria-hidden="true">
+-      <span class="code-bit" style="top:8%; left:3%; --r:2deg; --dur:12s; --delay:0.4s;">if not explainable: raise</span>
+-      <span class="code-bit sm" style="top:40%; left:94%; --r:-1deg; --dur:10s; --delay:1s;"># no-smartphone households</span>
+-      <span class="code-bit" style="top:72%; left:4%; --r:-2deg; --dur:14s; --delay:0.2s;">ship != scope</span>
+-      <span class="code-bit sm" style="top:90%; left:90%; --r:1deg; --dur:9s; --delay:1.4s;">assert reason is not None</span>
+-    </div>
+     <div class="section-head">
+       <p class="eyebrow-label reveal">About</p>
+       <h2 class="reveal">Three things I keep building around.</h2>
+@@ -178,11 +168,6 @@
+ 
+   <!-- ============ EXPERIENCE ============ -->
+   <section class="experience" id="experience">
+-    <div class="code-bg code-light" aria-hidden="true">
+-      <span class="code-bit sm" style="top:12%; left:91%; --r:-2deg; --dur:11s; --delay:0.5s;">intern.deploy(env='prod')</span>
+-      <span class="code-bit" style="top:45%; left:3%; --r:1deg; --dur:13s; --delay:1.1s;">gdsc.volunteer(role='dev')</span>
+-      <span class="code-bit sm" style="top:80%; left:92%; --r:2deg; --dur:10s; --delay:0.8s;">aicte.certificate.verify()</span>
+-    </div>
+     <div class="section-head">
+       <p class="eyebrow-label reveal">Experience</p>
+       <h2 class="reveal">Where the last two builds happened.</h2>
+@@ -234,12 +219,6 @@
+ 
+   <!-- ============ DASHBOARD / STATS ============ -->
+   <section class="dashboard" id="dashboard">
+-    <div class="code-bg code-dark" aria-hidden="true">
+-      <span class="code-bit" style="top:10%; left:4%; --r:-2deg; --dur:12s; --delay:0.3s;">hackathon.rank = 'finalist'</span>
+-      <span class="code-bit sm" style="top:35%; left:93%; --r:1deg; --dur:9s; --delay:1s;">leetcode.rating = 1844</span>
+-      <span class="code-bit" style="top:62%; left:3%; --r:2deg; --dur:14s; --delay:0.7s;">certs.append('NPTEL')</span>
+-      <span class="code-bit sm" style="top:85%; left:90%; --r:-1deg; --dur:10s; --delay:1.5s;">bugs_fixed += 1  # msvc</span>
+-    </div>
+     <div class="section-head">
+       <p class="eyebrow-label reveal light">Readout</p>
+       <h2 class="reveal light">The numbers behind the projects.</h2>
+@@ -556,11 +535,6 @@
+ 
+   <!-- ============ SKILLS ============ -->
+   <section class="skills" id="skills">
+-    <div class="code-bg code-light" aria-hidden="true">
+-      <span class="code-bit sm" style="top:8%; left:92%; --r:2deg; --dur:11s; --delay:0.2s;">import fastapi</span>
+-      <span class="code-bit" style="top:42%; left:3%; --r:-1deg; --dur:13s; --delay:1.2s;">from sklearn import linear_model</span>
+-      <span class="code-bit sm" style="top:78%; left:91%; --r:1deg; --dur:9s; --delay:0.6s;">docker build -t app .</span>
+-    </div>
+     <div class="section-head">
+       <p class="eyebrow-label reveal">Skills</p>
+       <h2 class="reveal">What's actually behind the four builds.</h2>
+@@ -592,11 +566,6 @@
+ 
+   <!-- ============ LOG / TERMINAL ============ -->
+   <section class="log" id="log">
+-    <div class="code-bg code-dark" aria-hidden="true">
+-      <span class="code-bit sm" style="top:10%; left:4%; --r:-1deg; --dur:12s; --delay:0.4s;">$ git log --oneline</span>
+-      <span class="code-bit" style="top:40%; left:90%; --r:2deg; --dur:10s; --delay:1s;">commit 7a3f9e2</span>
+-      <span class="code-bit sm" style="top:88%; left:5%; --r:1deg; --dur:13s; --delay:0.8s;">echo $STATUS</span>
+-    </div>
+     <div class="section-head">
+       <p class="eyebrow-label reveal light">Log</p>
+       <h2 class="reveal light">Achievements, verified.</h2>
+@@ -638,10 +607,6 @@
+ 
+   <!-- ============ CONTACT ============ -->
+   <section class="contact" id="contact">
+-    <div class="code-bg code-light" aria-hidden="true">
+-      <span class="code-bit sm" style="top:14%; left:6%; --r:1deg; --dur:11s; --delay:0.3s;">$ git push origin main</span>
+-      <span class="code-bit" style="top:78%; left:88%; --r:-2deg; --dur:13s; --delay:1.1s;">deploy --prod</span>
+-    </div>
+     <div class="contact-inner">
+       <p class="eyebrow-label reveal">Contact</p>
+       <h2 class="reveal">Let's build the next last mile.</h2>
+@@ -680,5 +645,6 @@
+ </footer>
+ 
+ <script src="script.js"></script>
++<script src="starfield.js" defer></script>
+ </body>
+ </html>
+diff --git a/script.js b/script.js
+index 121336e..b9afe6f 100644
+--- a/script.js
++++ b/script.js
+@@ -138,7 +138,7 @@
+           if (!link) return;
+           if (entry.isIntersecting) {
+             navLinks.forEach(function (l) { l.style.color = ""; });
+-            link.style.color = "var(--ink)";
++            link.style.color = "var(--text-on-ink)";
+           }
+         });
+       },
+diff --git a/starfield.js b/starfield.js
+new file mode 100644
+index 0000000..e557611
+--- /dev/null
++++ b/starfield.js
+@@ -0,0 +1,424 @@
++/* ==========================================================================
++   starfield.js
++   Ambient space background: stars that flicker and drift, with regular
++   shooting stars.
++
++   How it works
++   - Every section listed in SECTIONS gets its own <canvas class="sky"> as its
++     first child. The canvas sits behind the section's content (z-index -1
++     inside the section's own stacking context), so text stays crisp and
++     clickable.
++   - Only sections near the viewport are allocated and drawn. One shared
++     requestAnimationFrame loop drives everything.
++   - prefers-reduced-motion: stars are drawn once, still. No loop at all.
++
++   Everything you are likely to want to tweak is in CONFIG and LAYERS below.
++   ========================================================================== */
++(function () {
++  "use strict";
++
++  var CONFIG = {
++    // sections that get a sky. Add or remove selectors freely.
++    SECTIONS: ".hero-wrap, .about, .experience, .dashboard, .projects, .project, .skills, .log, .contact",
++
++    // stars per CSS pixel squared (1 / N). Smaller N = more stars.
++    DENSITY: 1 / 2000,
++    MAX_STARS: 650,
++    MOBILE_FACTOR: 0.65,         // multiplier on touch / narrow screens
++
++    // max canvas backing-store pixels per section. Lower = faster, softer stars.
++    PIXEL_BUDGET: 1500000,
++
++    ALPHA: 1,                    // peak brightness of a star (0 to 1)
++    DRIFT: 1,                    // 1 = default drift speed, 0 = no drift
++    TWINKLE: 1,                  // 1 = default flicker speed
++    POINTER_PARALLAX: 22,        // px of mouse parallax on the nearest stars
++    SCROLL_PARALLAX: 0.07,       // how much farther stars lag behind the page
++
++    METEORS: true,
++    METEOR_FIRST_MS: 1200,       // first shooting star after load
++    METEOR_MIN_S: 3,             // then one every MIN..MAX seconds
++    METEOR_MAX_S: 8
++  };
++
++  var TAU = Math.PI * 2;
++  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
++  var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
++  var DPR = Math.min(window.devicePixelRatio || 1, 2);
++
++  /* star colours, as [r, g, b, weight] */
++  var PALETTE = [
++    [243, 241, 233, 0.58],   // warm white (matches --text-on-ink)
++    [170, 200, 255, 0.26],   // cool blue-white
++    [240, 166, 59, 0.16]     // amber (matches --signal)
++  ];
++  var COLOURS = PALETTE.map(function (c) { return "rgb(" + c[0] + "," + c[1] + "," + c[2] + ")"; });
++
++  /* depth layers: far, mid, near. speed is px/s of drift, par is parallax strength */
++  var LAYERS = [
++    { share: 0.55, rMin: 0.55, rMax: 1.0, speed: [7, 12],  par: 0.3 },
++    { share: 0.33, rMin: 0.9,  rMax: 1.5, speed: [12, 20], par: 0.6 },
++    { share: 0.12, rMin: 1.3,  rMax: 2.0, speed: [20, 34], par: 1.0 }
++  ];
++
++  var skies = [];
++  var pointer = { x: 0, y: 0, tx: 0, ty: 0 };
++  var nextMeteorAt = 0;
++  var lastFrame = 0;
++
++  function rand(a, b) { return a + Math.random() * (b - a); }
++
++  function pickColour() {
++    var r = Math.random(), acc = 0;
++    for (var i = 0; i < PALETTE.length; i++) {
++      acc += PALETTE[i][3];
++      if (r <= acc) return i;
++    }
++    return 0;
++  }
++
++  /* ---------- sky creation ---------- */
++  function createSky(el) {
++    var canvas = document.createElement("canvas");
++    canvas.className = "sky";
++    canvas.width = canvas.height = 1;      // real size is allocated only when the section is near the viewport
++    canvas.setAttribute("aria-hidden", "true");
++    var ctx = canvas.getContext && canvas.getContext("2d");
++    if (!ctx) return null;
++
++    el.classList.add("has-sky");
++    el.insertBefore(canvas, el.firstChild);
++
++    return {
++      el: el,
++      canvas: canvas,
++      ctx: ctx,
++      // .projects only needs stars behind its heading, the articles below paint their own sky
++      until: el.classList.contains("projects") ? el.querySelector(".project") : null,
++      w: 0,
++      h: 0,
++      scale: 1,
++      visible: false,
++      dirty: true,
++      stars: [],
++      meteor: null
++    };
++  }
++
++  /* ---------- layout + seeding ---------- */
++  function measure(sky) {
++    var w = sky.el.clientWidth;
++    var h = sky.el.clientHeight;
++    if (sky.until) {
++      h = Math.max(0, Math.round(sky.until.getBoundingClientRect().top - sky.el.getBoundingClientRect().top));
++    }
++    return { w: w, h: h };
++  }
++
++  function layout(sky) {
++    var size = measure(sky);
++    if (size.w < 2 || size.h < 2) { sky.w = 0; sky.h = 0; sky.dirty = false; return false; }
++
++    var changed = size.w !== sky.w || size.h !== sky.h || sky.canvas.width <= 1;
++    if (changed) {
++      // render at device resolution when the canvas is small (phones), and
++      // closer to 1x when it is big. Pixel count is what costs frame time,
++      // not star count.
++      var scale = Math.max(0.75, Math.min(DPR, Math.sqrt(CONFIG.PIXEL_BUDGET / (size.w * size.h))));
++      sky.scale = scale;
++      sky.w = size.w;
++      sky.h = size.h;
++      sky.canvas.width = Math.round(size.w * scale);
++      sky.canvas.height = Math.round(size.h * scale);
++      if (sky.until) {
++        sky.canvas.style.bottom = "auto";
++        sky.canvas.style.height = size.h + "px";
++      }
++      seed(sky);
++    }
++    sky.dirty = false;
++    return true;
++  }
++
++  function seed(sky) {
++    var small = !finePointer || window.innerWidth < 700;
++    var density = CONFIG.DENSITY * (small ? CONFIG.MOBILE_FACTOR : 1);
++    var count = Math.min(CONFIG.MAX_STARS, Math.round(sky.w * sky.h * density));
++    var stars = [];
++
++    for (var i = 0; i < count; i++) {
++      var roll = Math.random(), acc = 0, li = 0;
++      for (var k = 0; k < LAYERS.length; k++) {
++        acc += LAYERS[k].share;
++        if (roll <= acc) { li = k; break; }
++      }
++      var L = LAYERS[li];
++      var speed = rand(L.speed[0], L.speed[1]) * CONFIG.DRIFT;
++      stars.push({
++        x: Math.random() * sky.w,
++        y: Math.random() * sky.h,
++        r: rand(L.rMin, L.rMax),
++        vx: speed,
++        vy: -speed * 0.26,              // gentle rise to the right
++        a: rand(0.55, 1) * CONFIG.ALPHA,
++        t1: rand(1.1, 4.2) * CONFIG.TWINKLE,   // main flicker, rad/s
++        t2: rand(0.4, 1.8) * CONFIG.TWINKLE,   // slower secondary flicker
++        ph: Math.random() * TAU,
++        c: pickColour(),
++        l: li,
++        par: L.par
++      });
++    }
++    // group by colour so we change fillStyle as rarely as possible
++    stars.sort(function (a, b) { return a.c - b.c; });
++    sky.stars = stars;
++  }
++
++  /* ---------- drawing ---------- */
++  function wrap(v, max) { return ((v % max) + max) % max; }
++
++  function draw(sky, t, still) {
++    var ctx = sky.ctx;
++    var w = sky.w, h = sky.h;
++    var rect = sky.el.getBoundingClientRect();
++    var vh = window.innerHeight;
++
++    ctx.setTransform(sky.scale, 0, 0, sky.scale, 0, 0);
++    ctx.clearRect(0, 0, w, h);
++
++    // part of the canvas that is actually on screen (canvas coords)
++    var yMin = -rect.top - 30;
++    var yMax = vh - rect.top + 30;
++
++    // parallax offsets
++    var scrollOff = still ? 0 : (vh / 2 - (rect.top + h / 2)) * CONFIG.SCROLL_PARALLAX;
++    var px = still ? 0 : -pointer.x * CONFIG.POINTER_PARALLAX;
++    var py = still ? 0 : -pointer.y * CONFIG.POINTER_PARALLAX;
++
++    var stars = sky.stars;
++    var lastC = -1;
++    for (var i = 0; i < stars.length; i++) {
++      var s = stars[i];
++      var x = wrap(s.x + s.vx * t + px * s.par, w);
++      var y = wrap(s.y + s.vy * t + (py + scrollOff) * s.par, h);
++      if (y < yMin || y > yMax) continue;
++
++      var f, alpha;
++      if (still) {
++        f = 0.85;
++        alpha = s.a * 0.85;
++      } else {
++        f = 0.5 + 0.5 * Math.sin(t * s.t1 + s.ph);
++        var g = Math.sin(t * s.t2 * 3.1 + s.ph * 2.3);
++        alpha = s.a * (0.1 + 0.9 * f * (0.7 + 0.3 * g));     // deep flicker: stars really do dim out and pop back
++      }
++      if (alpha < 0.03) continue;
++
++      if (s.c !== lastC) { ctx.fillStyle = COLOURS[s.c]; lastC = s.c; }
++
++      // soft halo on the bigger stars when they are bright
++      if (s.l === 2 || (s.l === 1 && f > 0.7)) {
++        ctx.globalAlpha = alpha * (s.l === 2 ? 0.16 : 0.1);
++        ctx.beginPath();
++        ctx.arc(x, y, s.r * 3.4, 0, TAU);
++        ctx.fill();
++      }
++
++      ctx.globalAlpha = alpha;
++      if (s.l === 0 && s.r < 0.9) {
++        ctx.fillRect(x - s.r, y - s.r, s.r * 2, s.r * 2);
++      } else {
++        ctx.beginPath();
++        ctx.arc(x, y, s.r, 0, TAU);
++        ctx.fill();
++      }
++
++      // cross-shaped sparkle at the brightest moment of the bigger stars
++      if (s.l >= 1 && f > (s.l === 2 ? 0.7 : 0.88)) {
++        var len = s.r * (s.l === 2 ? 4.8 : 3.6) * f;
++        ctx.globalAlpha = alpha * 0.65;
++        ctx.fillRect(x - len, y - 0.45, len * 2, 0.9);
++        ctx.fillRect(x - 0.45, y - len, 0.9, len * 2);
++      }
++    }
++    ctx.globalAlpha = 1;
++
++    if (sky.meteor) drawMeteor(sky, t);
++  }
++
++  /* ---------- shooting stars ---------- */
++  function spawnMeteor(sky) {
++    var rect = sky.el.getBoundingClientRect();
++    var vh = window.innerHeight;
++    var top = Math.max(0, -rect.top);
++    var bottom = Math.min(sky.h, vh - rect.top);
++    if (bottom - top < 120) return;
++
++    var dir = Math.random() < 0.5 ? 1 : -1;
++    var angle = rand(0.35, 0.62);                       // radians below horizontal
++    var speed = rand(620, 900);
++    sky.meteor = {
++      x: rand(0.1, 0.9) * sky.w,
++      y: top + rand(0.04, 0.5) * (bottom - top),
++      vx: Math.cos(angle) * speed * dir,
++      vy: Math.sin(angle) * speed,
++      len: rand(150, 260),
++      born: -1,
++      life: rand(0.9, 1.35)
++    };
++  }
++
++  function drawMeteor(sky, t) {
++    var m = sky.meteor;
++    if (m.born < 0) m.born = t;
++    var age = t - m.born;
++    var p = age / m.life;
++    if (p >= 1) { sky.meteor = null; return; }
++
++    var ctx = sky.ctx;
++    var hx = m.x + m.vx * age;
++    var hy = m.y + m.vy * age;
++    var mag = Math.sqrt(m.vx * m.vx + m.vy * m.vy);
++    var tx = hx - (m.vx / mag) * m.len;
++    var ty = hy - (m.vy / mag) * m.len;
++    var env = Math.sin(p * Math.PI);                    // fade in, fade out
++
++    var grad = ctx.createLinearGradient(hx, hy, tx, ty);
++    grad.addColorStop(0, "rgba(255,250,240," + env + ")");
++    grad.addColorStop(0.2, "rgba(255,214,150," + (0.6 * env) + ")");
++    grad.addColorStop(1, "rgba(240,166,59,0)");
++
++    ctx.lineCap = "round";
++    ctx.lineWidth = 2;
++    ctx.strokeStyle = grad;
++    ctx.beginPath();
++    ctx.moveTo(hx, hy);
++    ctx.lineTo(tx, ty);
++    ctx.stroke();
++
++    // glowing head
++    ctx.fillStyle = "rgb(255,248,235)";
++    ctx.globalAlpha = env * 0.22;
++    ctx.beginPath();
++    ctx.arc(hx, hy, 6, 0, TAU);
++    ctx.fill();
++    ctx.globalAlpha = env;
++    ctx.beginPath();
++    ctx.arc(hx, hy, 1.8, 0, TAU);
++    ctx.fill();
++    ctx.globalAlpha = 1;
++  }
++
++  function maybeSpawnMeteor(nowMs) {
++    if (!CONFIG.METEORS || reduceMotion || nowMs < nextMeteorAt) return;
++    var pool = skies.filter(function (s) { return s.visible && !s.meteor && s.w; });
++    nextMeteorAt = nowMs + rand(CONFIG.METEOR_MIN_S, CONFIG.METEOR_MAX_S) * 1000;
++    if (!pool.length) { nextMeteorAt = nowMs + 1000; return; }
++    spawnMeteor(pool[Math.floor(Math.random() * pool.length)]);
++  }
++
++  /* ---------- lifecycle ---------- */
++  function release(sky) {
++    sky.visible = false;
++    sky.meteor = null;
++    sky.canvas.width = 1;          // free the backing store while off screen
++    sky.canvas.height = 1;
++    sky.w = 0;
++    sky.h = 0;
++  }
++
++  function frame(nowMs) {
++    requestAnimationFrame(frame);
++    var t = nowMs / 1000;
++    var dt = Math.min(t - lastFrame, 0.1);
++    lastFrame = t;
++
++    if (finePointer) {
++      var k = Math.min(1, dt * 3);
++      pointer.x += (pointer.tx - pointer.x) * k;
++      pointer.y += (pointer.ty - pointer.y) * k;
++    }
++
++    maybeSpawnMeteor(nowMs);
++
++    for (var i = 0; i < skies.length; i++) {
++      var sky = skies[i];
++      if (!sky.visible) continue;
++      if ((sky.dirty || !sky.w) && !layout(sky)) continue;
++      draw(sky, t, false);
++    }
++  }
++
++  function renderStillFrames() {
++    skies.forEach(function (sky) {
++      if (!sky.visible) return;
++      if (layout(sky)) draw(sky, 0, true);
++    });
++  }
++
++  function skyFor(el) {
++    return skies.filter(function (s) { return s.el === el; })[0];
++  }
++
++  function init() {
++    Array.prototype.forEach.call(document.querySelectorAll(CONFIG.SECTIONS), function (el) {
++      var sky = createSky(el);
++      if (sky) skies.push(sky);
++    });
++    if (!skies.length) return;
++
++    // allocate / free canvases as sections scroll near the viewport
++    var io = "IntersectionObserver" in window
++      ? new IntersectionObserver(function (entries) {
++          entries.forEach(function (entry) {
++            var sky = skyFor(entry.target);
++            if (!sky) return;
++            if (entry.isIntersecting) {
++              sky.visible = true;
++              sky.dirty = true;
++            } else if (sky.visible) {
++              release(sky);
++            }
++          });
++          if (reduceMotion) renderStillFrames();
++        }, { rootMargin: "160px 0px 160px 0px" })
++      : null;
++
++    skies.forEach(function (sky) {
++      if (io) io.observe(sky.el); else { sky.visible = true; sky.dirty = true; }
++    });
++
++    // re-measure when a section changes height (fonts, wrapping, resize)
++    if ("ResizeObserver" in window) {
++      var ro = new ResizeObserver(function (entries) {
++        entries.forEach(function (entry) {
++          var sky = skyFor(entry.target);
++          if (sky) sky.dirty = true;
++        });
++        if (reduceMotion) renderStillFrames();
++      });
++      skies.forEach(function (sky) { ro.observe(sky.el); });
++    }
++
++    if (reduceMotion) {
++      renderStillFrames();
++      return;
++    }
++
++    if (finePointer) {
++      window.addEventListener("pointermove", function (e) {
++        pointer.tx = e.clientX / window.innerWidth - 0.5;
++        pointer.ty = e.clientY / window.innerHeight - 0.5;
++      }, { passive: true });
++    }
++
++    nextMeteorAt = performance.now() + CONFIG.METEOR_FIRST_MS;
++    requestAnimationFrame(frame);
++  }
++
++  if (document.readyState === "loading") {
++    document.addEventListener("DOMContentLoaded", init);
++  } else {
++    init();
++  }
++})();
+diff --git a/styles.css b/styles.css
+index d6933fe..2413e1b 100644
+--- a/styles.css
++++ b/styles.css
+@@ -1,6 +1,6 @@
+ /* ==========================================================================
+    Pavitra Sharma, Portfolio
+-   Design tokens: ink navy + paper stone + signal marigold + risk brick + trust sage
++   Design tokens: ink navy (the whole site is dark now) + cream text + signal marigold + risk brick + trust sage
+    Type: Space Grotesk (display) / IBM Plex Sans (body) / IBM Plex Mono (data)
+    Signature motif: the explainable gauge, reused across hero and all four projects
+    ========================================================================== */
+@@ -9,16 +9,11 @@
+   --ink: #0E1B2A;
+   --ink-soft: #1B2C42;
+   --paper: #F3F1E9;
+-  --paper-dim: #E9E5D8;
+   --signal: #F0A63B;
+   --signal-dim: #C98328;
+-  --signal-text: #8F5312; /* AA-contrast amber for small text on paper and paper-dim */
+   --brick: #D65C4A;
+   --sage: #4C9A6A;
+-  --line-on-paper: rgba(14, 27, 42, 0.12);
+   --line-on-ink: rgba(243, 241, 233, 0.16);
+-  --text-on-paper: #14202F;
+-  --text-on-paper-mute: #52606F;
+   --text-on-ink: #F3F1E9;
+   --text-on-ink-mute: #A9B4C4;
+ 
+@@ -32,7 +27,7 @@
+ }
+ 
+ * { box-sizing: border-box; }
+-html { scroll-behavior: smooth; }
++html { scroll-behavior: smooth; background: var(--ink); color-scheme: dark; }
+ @media (prefers-reduced-motion: reduce) {
+   html { scroll-behavior: auto; }
+   *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+@@ -40,8 +35,8 @@ html { scroll-behavior: smooth; }
+ 
+ body {
+   margin: 0;
+-  background: var(--paper);
+-  color: var(--text-on-paper);
++  background: var(--ink);
++  color: var(--text-on-ink);
+   font-family: var(--font-body);
+   font-size: 16px;
+   line-height: 1.5;
+@@ -55,7 +50,7 @@ ul { margin: 0; padding: 0; list-style: none; }
+ svg { display: block; }
+ 
+ .skip-link {
+-  position: absolute; left: -999px; top: 0; background: var(--ink); color: var(--paper);
++  position: absolute; left: -999px; top: 0; background: var(--signal); color: var(--ink);
+   padding: 10px 16px; z-index: 999; font-family: var(--font-mono); font-size: 13px;
+ }
+ .skip-link:focus { left: 12px; top: 12px; }
+@@ -66,7 +61,7 @@ svg { display: block; }
+ .section-head { max-width: var(--container); margin: 0 auto; padding: 0 24px; margin-bottom: 52px; }
+ .eyebrow-label {
+   font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+-  color: var(--signal-text); margin-bottom: 14px; font-weight: 500;
++  color: var(--signal); margin-bottom: 14px; font-weight: 500;
+ }
+ .eyebrow-label.light { color: var(--signal); }
+ .section-head h2 { font-size: clamp(28px, 4vw, 42px); font-weight: 600; letter-spacing: -0.02em; max-width: 720px; line-height: 1.15; }
+@@ -75,6 +70,7 @@ svg { display: block; }
+ /* ---------- scroll progress bar ---------- */
+ .scroll-progress {
+   position: fixed; top: 0; left: 0; width: 100%; height: 3px; z-index: 200; pointer-events: none;
++  background: var(--ink); /* solid track so content scrolling under the sticky nav never peeks through this strip */
+ }
+ .scroll-progress-bar {
+   height: 100%; width: 0%; background: var(--signal); transform-origin: left;
+@@ -83,8 +79,9 @@ svg { display: block; }
+ /* ---------- nav ---------- */
+ .nav {
+   position: sticky; top: 3px; z-index: 100;
+-  background: var(--paper);
+-  border-bottom: 1px solid var(--line-on-paper);
++  background: rgba(14, 27, 42, 0.86);
++  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
++  border-bottom: 1px solid var(--line-on-ink);
+   transform: translateY(-100%); opacity: 0;
+   animation: nav-slide-in 0.85s var(--ease) forwards;
+   animation-delay: 0.05s;
+@@ -104,20 +101,20 @@ svg { display: block; }
+ .nav-mark svg { display: block; flex: 0 0 auto; }
+ .nav-mark-name {
+   font-family: var(--font-mono); font-weight: 600; font-size: 14px; letter-spacing: 0.04em;
+-  line-height: normal; color: var(--ink);
++  line-height: normal; color: var(--text-on-ink);
+ }
+ .nav-links { display: flex; align-items: center; gap: 28px; font-size: 14px; }
+-.nav-links a { position: relative; padding: 4px 0; color: var(--text-on-paper-mute); transition: color 0.2s var(--ease); }
+-.nav-links a:hover { color: var(--text-on-paper); }
++.nav-links a { position: relative; padding: 4px 0; color: var(--text-on-ink-mute); transition: color 0.2s var(--ease); }
++.nav-links a:hover { color: var(--text-on-ink); }
+ .nav-cta {
+-  background: var(--ink); color: var(--paper) !important; padding: 8px 16px !important;
++  background: var(--signal); color: var(--ink) !important; padding: 8px 16px !important;
+   border-radius: 999px; font-family: var(--font-mono); font-size: 13px;
+ }
+-.nav-cta:hover { background: var(--ink-soft); }
++.nav-cta:hover { background: #F5B755; }
+ .nav-toggle { display: none; flex-direction: column; gap: 4px; background: none; border: none; padding: 8px; cursor: pointer; }
+-.nav-toggle span { width: 20px; height: 2px; background: var(--ink); border-radius: 2px; transition: transform 0.25s var(--ease), opacity 0.25s var(--ease); }
++.nav-toggle span { width: 20px; height: 2px; background: var(--text-on-ink); border-radius: 2px; transition: transform 0.25s var(--ease), opacity 0.25s var(--ease); }
+ .nav-mobile { display: none; flex-direction: column; padding: 8px 24px 20px; gap: 4px; }
+-.nav-mobile a { padding: 12px 0; border-bottom: 1px solid var(--line-on-paper); font-size: 15px; color: var(--text-on-paper); }
++.nav-mobile a { padding: 12px 0; border-bottom: 1px solid var(--line-on-ink); font-size: 15px; color: var(--text-on-ink); }
+ .nav-mobile.open { display: flex; }
+ 
+ @media (max-width: 780px) {
+@@ -136,41 +133,41 @@ svg { display: block; }
+ .eyebrow { margin-bottom: 24px; }
+ .eyebrow-pill {
+   display: inline-block; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.02em;
+-  padding: 8px 16px; border: 1px solid var(--line-on-paper); border-radius: 999px; color: var(--text-on-paper-mute);
+-  background: rgba(255,255,255,0.5);
++  padding: 8px 16px; border: 1px solid var(--line-on-ink); border-radius: 999px; color: var(--text-on-ink-mute);
++  background: rgba(243, 241, 233, 0.06);
+ }
+ .hero-h1 {
+   font-size: clamp(38px, 5.6vw, 68px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.04;
+-  color: var(--ink);
++  color: var(--text-on-ink);
+ }
+-.hero-h1 em { font-style: normal; color: var(--signal-text); }
++.hero-h1 em { font-style: normal; color: var(--signal); }
+ .line-wrap { display: block; overflow: hidden; }
+ .line-inner { display: block; }
+ .hero-sub {
+-  margin-top: 28px; max-width: 46ch; font-size: 18px; line-height: 1.6; color: var(--text-on-paper-mute);
++  margin-top: 28px; max-width: 46ch; font-size: 18px; line-height: 1.6; color: var(--text-on-ink-mute);
+ }
+ .hero-actions { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; }
+ .hero-facts {
+-  margin: 44px 0 0; padding-top: 24px; border-top: 1px solid var(--line-on-paper);
++  margin: 44px 0 0; padding-top: 24px; border-top: 1px solid var(--line-on-ink);
+   display: flex; gap: 36px; flex-wrap: wrap;
+ }
+ .hero-facts > div { display: flex; flex-direction: column; gap: 4px; }
+-.hero-facts dt { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-on-paper-mute); }
++.hero-facts dt { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-on-ink-mute); }
+ .hero-facts dd { margin: 0; font-size: 14px; font-weight: 500; }
+ 
+ .hero-fade-text { will-change: opacity, transform; }
+ .hero-gauge-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; will-change: opacity, transform; }
+ .hero-gauge { width: 100%; max-width: 260px; }
+-.gauge-track { fill: none; stroke: var(--line-on-paper); stroke-width: 10; }
++.gauge-track { fill: none; stroke: var(--line-on-ink); stroke-width: 10; }
+ .gauge-fill {
+   fill: none; stroke: var(--signal); stroke-width: 10; stroke-linecap: round;
+   transform-origin: center; transform: rotate(-90deg);
+   stroke-dasharray: var(--gauge-circumference); stroke-dashoffset: var(--gauge-circumference);
+   transition: stroke-dashoffset 1.4s var(--ease);
+ }
+-.gauge-num { font-family: var(--font-display); font-size: 34px; font-weight: 700; fill: var(--ink); }
+-.gauge-cap { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; fill: var(--text-on-paper-mute); }
+-.hero-gauge-caption { font-family: var(--font-mono); font-size: 12px; color: var(--text-on-paper-mute); text-align: center; }
++.gauge-num { font-family: var(--font-display); font-size: 34px; font-weight: 700; fill: var(--text-on-ink); }
++.gauge-cap { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; fill: var(--text-on-ink-mute); }
++.hero-gauge-caption { font-family: var(--font-mono); font-size: 12px; color: var(--text-on-ink-mute); text-align: center; }
+ 
+ /* ---------- buttons ---------- */
+ .btn {
+@@ -180,10 +177,10 @@ svg { display: block; }
+   border: 1px solid transparent;
+ }
+ .btn:hover { transform: translateY(-2px); }
+-.btn-primary { background: var(--ink); color: var(--paper); }
+-.btn-primary:hover { background: var(--ink-soft); }
+-.btn-ghost { border-color: var(--line-on-paper); color: var(--text-on-paper); }
+-.btn-ghost:hover { border-color: var(--ink); }
++.btn-primary { background: var(--signal); color: var(--ink); }
++.btn-primary:hover { background: #F5B755; }
++.btn-ghost { border-color: var(--line-on-ink); color: var(--text-on-ink); }
++.btn-ghost:hover { border-color: var(--text-on-ink); background: rgba(243, 241, 233, 0.06); }
+ .btn-sm { padding: 9px 16px; font-size: 13px; }
+ 
+ /* ---------- marquee ---------- */
+@@ -205,37 +202,37 @@ svg { display: block; }
+ 
+ /* ---------- about ---------- */
+ .about { padding: 120px 0 100px; position: relative; z-index: 0; }
+-.about-sub { margin-top: 16px; color: var(--text-on-paper-mute); font-size: 15px; }
++.about-sub { margin-top: 16px; color: var(--text-on-ink-mute); font-size: 15px; }
+ .manifesto {
+   max-width: var(--container); margin: 0 auto; padding: 0 24px;
+   display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;
+ }
+-.manifesto-item { border-top: 1px solid var(--line-on-paper); padding-top: 24px; }
+-.manifesto-num { font-family: var(--font-mono); color: var(--signal-text); font-size: 13px; letter-spacing: 0.08em; }
++.manifesto-item { border-top: 1px solid var(--line-on-ink); padding-top: 24px; }
++.manifesto-num { font-family: var(--font-mono); color: var(--signal); font-size: 13px; letter-spacing: 0.08em; }
+ .manifesto-item h3 { font-size: 21px; margin: 14px 0 12px; letter-spacing: -0.01em; }
+-.manifesto-item p { color: var(--text-on-paper-mute); font-size: 15px; line-height: 1.65; }
++.manifesto-item p { color: var(--text-on-ink-mute); font-size: 15px; line-height: 1.65; }
+ 
+ /* ---------- experience / timeline ---------- */
+-.experience { padding: 100px 0; background: var(--paper-dim); position: relative; z-index: 0; }
++.experience { padding: 100px 0; background: var(--ink); position: relative; z-index: 0; }
+ .timeline { max-width: var(--container); margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 0; }
+ .timeline-item {
+   display: grid; grid-template-columns: 140px 1fr; gap: 32px; padding: 36px 0;
+-  border-top: 1px solid var(--line-on-paper);
++  border-top: 1px solid var(--line-on-ink);
+ }
+-.timeline-item:last-child { border-bottom: 1px solid var(--line-on-paper); }
+-.timeline-date { display: flex; flex-direction: column; font-family: var(--font-mono); font-size: 13px; color: var(--text-on-paper-mute); gap: 1px; }
++.timeline-item:last-child { border-bottom: 1px solid var(--line-on-ink); }
++.timeline-date { display: flex; flex-direction: column; font-family: var(--font-mono); font-size: 13px; color: var(--text-on-ink-mute); gap: 1px; }
+ .timeline-date span:nth-child(2) { margin-bottom: 6px; }
+ .timeline-to { margin: 4px 0; opacity: 0.6; }
+ .timeline-body h3 { font-size: 19px; font-weight: 600; }
+-.timeline-body h3 span { font-weight: 400; color: var(--text-on-paper-mute); font-family: var(--font-body); font-size: 16px; }
++.timeline-body h3 span { font-weight: 400; color: var(--text-on-ink-mute); font-family: var(--font-body); font-size: 16px; }
+ .timeline-tag {
+   display: inline-block; margin: 10px 0 14px; font-family: var(--font-mono); font-size: 11px;
+-  letter-spacing: 0.1em; text-transform: uppercase; color: var(--signal-text);
++  letter-spacing: 0.1em; text-transform: uppercase; color: var(--signal);
+ }
+-.timeline-body p:not(.timeline-tag) { color: var(--text-on-paper-mute); font-size: 15px; line-height: 1.65; max-width: 62ch; }
++.timeline-body p:not(.timeline-tag) { color: var(--text-on-ink-mute); font-size: 15px; line-height: 1.65; max-width: 62ch; }
+ .timeline-links { margin-top: 16px; display: flex; gap: 20px; flex-wrap: wrap; }
+-.timeline-links a { font-family: var(--font-mono); font-size: 13px; color: var(--ink); border-bottom: 1px solid var(--line-on-paper); padding-bottom: 2px; }
+-.timeline-links a:hover { border-color: var(--ink); }
++.timeline-links a { font-family: var(--font-mono); font-size: 13px; color: var(--text-on-ink); border-bottom: 1px solid var(--line-on-ink); padding-bottom: 2px; transition: border-color 0.2s var(--ease), color 0.2s var(--ease); }
++.timeline-links a:hover { border-color: var(--signal); color: var(--signal); }
+ 
+ /* ---------- dashboard / bento stats ---------- */
+ .dashboard { padding: 100px 0; background: var(--ink); color: var(--text-on-ink); position: relative; z-index: 0; }
+@@ -257,14 +254,12 @@ svg { display: block; }
+   max-width: var(--container); margin: 0 auto; padding: 76px 24px 36px;
+   display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+ }
+-.project-light { background: var(--paper); color: var(--text-on-paper); }
+-.project-dark { background: var(--ink); color: var(--text-on-ink); }
++.project-light, .project-dark { background: var(--ink); color: var(--text-on-ink); }
+ .project-info, .project-visual { display: flex; flex-direction: column; justify-content: center; }
+ .project-visual { align-items: center; gap: 20px; }
+ .project-dark .project-visual { order: 1; }
+ .order-first { order: -1; }
+ .project-index { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--signal); margin-bottom: 18px; }
+-.project-light .project-index { color: var(--signal-text); }
+ .project h3 { font-size: clamp(26px, 3vw, 36px); font-weight: 600; letter-spacing: -0.02em; }
+ .project-sub { display: block; font-family: var(--font-body); font-weight: 400; font-size: 16px; margin-top: 6px; opacity: 0.65; }
+ .project-problem { margin-top: 22px; font-size: 15px; line-height: 1.7; opacity: 0.82; max-width: 52ch; }
+@@ -275,15 +270,11 @@ svg { display: block; }
+   border: 1px solid currentColor; opacity: 0.85;
+ }
+ .project-links { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+-.project-dark .btn-primary { background: var(--signal); color: var(--ink); }
+-.project-dark .btn-ghost { border-color: var(--line-on-ink); color: var(--text-on-ink); }
+-.project-dark .btn-ghost:hover { border-color: var(--text-on-ink); background: rgba(243, 241, 233, 0.06); }
+ .project-disclaimer { margin-top: 22px; font-size: 12px; opacity: 0.7; font-style: italic; }
+ 
+ /* ---------- project system-flow diagrams ---------- */
+ .project-flow-wrap { max-width: var(--container); margin: 0 auto; padding: 0 24px 76px; }
+-.project-light .project-flow-wrap { border-top: 1px solid var(--line-on-paper); }
+-.project-dark .project-flow-wrap { border-top: 1px solid var(--line-on-ink); }
++.project-flow-wrap { border-top: 1px solid var(--line-on-ink); }
+ .project-flow { padding-top: 40px; }
+ .flow-caption {
+   font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+@@ -293,8 +284,7 @@ svg { display: block; }
+ .flow-diagram { width: 100%; min-width: 600px; height: auto; display: block; overflow: visible; }
+ .flow-line { stroke: currentColor; stroke-width: 1.5; opacity: 0.4; }
+ .flow-node-rect { fill: currentColor; fill-opacity: 0.05; stroke: currentColor; stroke-opacity: 0.28; stroke-width: 1.4; }
+-.flow-node-accent { stroke: var(--signal-text); stroke-opacity: 0.9; stroke-width: 1.6; fill: var(--signal-text); fill-opacity: 0.08; }
+-.project-dark .flow-node-accent { stroke: var(--signal); fill: var(--signal); }
++.flow-node-accent { stroke: var(--signal); stroke-opacity: 0.9; stroke-width: 1.6; fill: var(--signal); fill-opacity: 0.08; }
+ .flow-node-title { font-family: var(--font-body); font-weight: 600; font-size: 13.5px; fill: currentColor; }
+ .flow-node-sub { font-family: var(--font-mono); font-size: 9.5px; fill: currentColor; opacity: 0.72; }
+ .flow-ball-glow { fill: var(--signal); opacity: 0.25; }
+@@ -308,8 +298,7 @@ svg { display: block; }
+ }
+ .flow-stats { display: flex; gap: 48px; flex-wrap: wrap; margin-top: 32px; }
+ .flow-stat { display: flex; flex-direction: column; gap: 4px; }
+-.flow-num { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--signal-text); line-height: 1; }
+-.project-dark .flow-num { color: var(--signal); }
++.flow-num { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--signal); line-height: 1; }
+ .flow-label { font-size: 13px; opacity: 0.72; max-width: 22ch; line-height: 1.4; }
+ 
+ .visual-caption { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
+@@ -318,8 +307,7 @@ svg { display: block; }
+ /* bars (Baadh Mitra) */
+ .bars { width: 100%; max-width: 380px; display: flex; flex-direction: column; gap: 14px; }
+ .bar-row { display: grid; grid-template-columns: 130px 1fr 40px; align-items: center; gap: 10px; font-size: 12px; }
+-.bar-track { height: 8px; border-radius: 999px; background: rgba(20, 32, 47, 0.15); overflow: hidden; }
+-.project-dark .bar-track { background: rgba(243, 241, 233, 0.18); }
++.bar-track { height: 8px; border-radius: 999px; background: rgba(243, 241, 233, 0.18); overflow: hidden; }
+ .bar-fill { height: 100%; width: 0; background: var(--signal); border-radius: 999px; transition: width 1.1s var(--ease); }
+ .bar-val { font-family: var(--font-mono); text-align: right; opacity: 0.7; }
+ 
+@@ -353,13 +341,13 @@ svg { display: block; }
+   display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+ }
+ .skill-cell {
+-  border: 1px solid var(--line-on-paper); border-radius: 20px; padding: 28px 24px; background: rgba(255,255,255,0.4);
++  border: 1px solid var(--line-on-ink); border-radius: 20px; padding: 28px 24px; background: rgba(243, 241, 233, 0.04);
+   transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
+ }
+ .skill-cell:hover { border-color: var(--signal-dim); transform: translateY(-3px); }
+ .skill-cell-wide { grid-column: span 4; }
+-.skill-cell h3 { font-size: 14px; font-family: var(--font-mono); letter-spacing: 0.04em; margin-bottom: 12px; color: var(--signal-text); }
+-.skill-cell p { font-size: 14.5px; line-height: 1.7; color: var(--text-on-paper-mute); }
++.skill-cell h3 { font-size: 14px; font-family: var(--font-mono); letter-spacing: 0.04em; margin-bottom: 12px; color: var(--signal); }
++.skill-cell p { font-size: 14.5px; line-height: 1.7; color: var(--text-on-ink-mute); }
+ 
+ /* ---------- log / terminal ---------- */
+ .log { padding: 100px 0 120px; background: var(--ink); color: var(--text-on-ink); position: relative; z-index: 0; }
+@@ -392,19 +380,19 @@ svg { display: block; }
+ .contact { padding: 130px 0 110px; position: relative; z-index: 0; }
+ .contact-inner { max-width: 760px; margin: 0 auto; padding: 0 24px; text-align: center; }
+ .contact h2 { font-size: clamp(32px, 5vw, 52px); margin-top: 14px; letter-spacing: -0.02em; }
+-.contact-sub { margin: 22px auto 0; max-width: 50ch; color: var(--text-on-paper-mute); font-size: 16px; line-height: 1.6; }
++.contact-sub { margin: 22px auto 0; max-width: 50ch; color: var(--text-on-ink-mute); font-size: 16px; line-height: 1.6; }
+ .contact-pills { margin-top: 40px; display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+ .pill {
+   display: inline-flex; align-items: center; gap: 9px; padding: 12px 20px; border-radius: 999px;
+-  border: 1px solid var(--line-on-paper); font-size: 14px; transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), background 0.2s var(--ease);
++  border: 1px solid var(--line-on-ink); font-size: 14px; transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), background 0.2s var(--ease);
+ }
+-.pill:hover { border-color: var(--ink); transform: translateY(-2px); background: rgba(255,255,255,0.6); }
++.pill:hover { border-color: var(--signal); transform: translateY(-2px); background: rgba(243, 241, 233, 0.08); }
+ .contact-foot { margin-top: 30px; font-family: var(--font-mono); font-size: 13px; }
+-.contact-foot a { border-bottom: 1px solid var(--line-on-paper); padding-bottom: 2px; }
++.contact-foot a { border-bottom: 1px solid var(--line-on-ink); padding-bottom: 2px; }
+ 
+ /* ---------- footer ---------- */
+ .footer { padding: 28px 24px; text-align: center; }
+-.footer p { font-family: var(--font-mono); font-size: 12px; color: var(--text-on-paper-mute); }
++.footer p { font-family: var(--font-mono); font-size: 12px; color: var(--text-on-ink-mute); }
+ 
+ /* ---------- reveal on scroll ---------- */
+ .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); transition-delay: calc(var(--d, 0) * 90ms); }
+@@ -417,32 +405,6 @@ svg { display: block; }
+   .nav { animation: none; transform: none; opacity: 1; }
+ }
+ 
+-/* ---------- ambient code background ---------- */
+-/* decorative only, aria-hidden. pure CSS (no canvas/JS) so it's cheap to run
+-   on every section it's placed in. negative z-index keeps it behind the
+-   section's real content without needing to touch that content's stacking. */
+-.code-bg {
+-  position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none;
+-}
+-.code-bit {
+-  position: absolute; font-family: var(--font-mono); font-size: 13px; white-space: nowrap;
+-  opacity: var(--op, 0.16);
+-  transform: rotate(var(--r, 0deg));
+-  animation: code-float var(--dur, 11s) ease-in-out infinite;
+-  animation-delay: var(--delay, 0s);
+-}
+-.code-bit.lg { font-size: 15px; }
+-.code-bit.sm { font-size: 11px; }
+-.code-light .code-bit { color: var(--signal-text); }
+-.code-dark .code-bit { color: var(--signal); }
+-@keyframes code-float {
+-  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); opacity: var(--op, 0.16); }
+-  50% { transform: translateY(-14px) rotate(var(--r, 0deg)); opacity: calc(var(--op, 0.16) * 0.55); }
+-}
+-@media (max-width: 780px) {
+-  .code-bit { display: none; }
+-}
+-
+ /* ---------- responsive ---------- */
+ @media (max-width: 980px) {
+   .hero { grid-template-columns: 1fr; }
+@@ -469,3 +431,46 @@ svg { display: block; }
+   .hero-facts { gap: 20px 28px; }
+   .contact-pills { flex-direction: column; }
+ }
++
++/* ==========================================================================
++   Space theme
++   Pairs with starfield.js, which drops a <canvas class="sky"> into each
++   section. To remove the whole effect: delete starfield.js, its <script>
++   tag, and this block.
++   ========================================================================== */
++
++/* each sky lives behind its section's content, inside the section's own
++   stacking context */
++.has-sky { position: relative; isolation: isolate; }
++.sky {
++  position: absolute; inset: 0; width: 100%; height: 100%;
++  z-index: -1; pointer-events: none; display: block;
++}
++@media print { .sky { display: none; } }
++
++/* ---------- night-sky hero ---------- */
++/* full-bleed wrapper so the sky and nebula run edge to edge */
++.hero-wrap { overflow: hidden; background-color: var(--ink); background-image: linear-gradient(180deg, #091320 0%, var(--ink) 100%); }
++/* slow-moving nebula glow behind the stars. transform-only, so it is cheap */
++.hero-wrap::before {
++  content: ""; position: absolute; inset: -18% -8%; z-index: -1; pointer-events: none;
++  background:
++    radial-gradient(38% 44% at 82% 30%, rgba(240, 166, 59, 0.13), transparent 70%),
++    radial-gradient(44% 50% at 10% 80%, rgba(96, 128, 214, 0.17), transparent 70%),
++    radial-gradient(30% 34% at 52% 6%, rgba(150, 110, 220, 0.09), transparent 70%);
++  animation: nebula-drift 42s ease-in-out infinite alternate;
++}
++@keyframes nebula-drift {
++  from { transform: translate3d(-2.5%, 1%, 0) scale(1); }
++  to   { transform: translate3d(2.5%, -3%, 0) scale(1.08); }
++}
++.hero-gauge { overflow: visible; }
++.hero-gauge-fill { filter: drop-shadow(0 0 12px rgba(240, 166, 59, 0.38)); }
++
++/* faint colour washes so the long dark page has some variety instead of one flat slab.
++   each one is centred vertically and fades to zero before it reaches the section's
++   top or bottom edge (radius < 50% of height), so there are never any visible seams */
++.about      { background: radial-gradient(45% 40% at 6% 50%,  rgba(96, 128, 214, 0.11), transparent 100%), var(--ink); }
++.experience { background: radial-gradient(45% 40% at 94% 50%, rgba(240, 166, 59, 0.08), transparent 100%), var(--ink); }
++.skills     { background: radial-gradient(45% 40% at 94% 50%, rgba(150, 110, 220, 0.11), transparent 100%), var(--ink); }
++.contact    { background: radial-gradient(50% 42% at 50% 50%, rgba(240, 166, 59, 0.10), transparent 100%), var(--ink); }
